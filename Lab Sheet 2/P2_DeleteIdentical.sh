@@ -17,12 +17,12 @@ for file in "$d1"/*
 do
 	fileName=$(basename "$file")
 	
-	if [ -f "$file" ] && [ -f "$d2/$filename" ]
+	if [ -f "$file" ] && [ -f "$d2/$fileName" ]
 	then
-		if cmp -s "$file" "$d2/$filename"
+		if cmp -s "$file" "$d2/$fileName"
 		then
-			rm "$d2/$filename"
-			echo -e "\nDeleted: $d2/$filename"
+			rm "$d2/$fileName"
+			echo -e "\nDeleted: $d2/$fileName"
 		fi
 	fi
 done
