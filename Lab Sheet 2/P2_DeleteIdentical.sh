@@ -1,5 +1,5 @@
 # Device a script that accepts two directory names d1 and d2, and deletes those file in d2 which are identical 
-# to their names in d1.
+# to their names as well as contents in d1.
 
 echo "Enter the first directory name:"
 read d1
