@@ -13,18 +13,18 @@ int main() {
     pid_t pid = fork();
 
     if (pid < 0) {
-        perror("Fork failed!");
+        perror("\nFork failed!");
         exit(1);
     } else if (pid  == 0) {
         // Child process
-        printf("[Child] PID: %d, Parent PID: %d -> Exiting immediately to become a zombie.\n", getpid(), getppid());
+        printf("\n[Child] PID: %d, Parent PID: %d -> Exiting immediately to become a zombie.", getpid(), getppid());
         exit(0);
     } else {
         // Parent process
-        printf("[Parent] PID: %d -> Sleeping for 15 seconds. Check 'ps' now.\n", getpid());
+        printf("\n[Parent] PID: %d -> Sleeping for 15 seconds. Check 'ps' now.", getpid());
         sleep(15);
 
-        printf("[Parent] PID: %d -> Terminating without calling wait().\n", getpid());
+        printf("\n[Parent] PID: %d -> Terminating without calling wait().", getpid());
         exit(0);
     }
 

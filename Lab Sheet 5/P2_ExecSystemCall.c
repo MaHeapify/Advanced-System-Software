@@ -17,7 +17,7 @@ int main() {
 
     switch (pid) {
         case -1:
-            perror("\nFork failed.");
+            perror("\nFork failed!");
             exit(1);
 
         case 0:
@@ -30,10 +30,10 @@ int main() {
                 2. Argument 0 (Conventionally the program name: "fork_program")
                 3. NULL (Terminator to signal the end of argument arrays)
             */
-           execl("./P1_WaitSystemCall", "fork_program", NULL);
+           execl("./P1_WaitSystemCall.out", "fork_program", NULL);
 
            // If execl() succeeds, the code below is never executed because the child's memory is overwritten.
-           perror("\nexecl failed.");
+           perror("\nexecl failed!");
            exit(1);
 
         default:
