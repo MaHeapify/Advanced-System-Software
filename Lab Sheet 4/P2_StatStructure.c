@@ -31,7 +31,7 @@ void displayFileStatStructure(char fileName[], struct stat fileStatStructure) {
     // Display total size
     printf("\nTotal size: %ld", (long)fileStatStructure.st_size);
 
-    // Display block size when supported by the platform
+    // Display block size
     printf("\nBlock size: %ld", (long)fileStatStructure.st_blksize);
 
     // Display number of blocks allocated
